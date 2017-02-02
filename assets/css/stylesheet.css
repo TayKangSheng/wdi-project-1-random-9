@@ -21,6 +21,7 @@ canvas {
 .col-md-7 {
   margin: auto;
   padding: 0;
+  min-width: 720px;
 }
 
 p, ul {
@@ -49,6 +50,7 @@ h2 {
 .col-md-5 {
   margin: 0 50px 20px 0;
   padding: 0;
+  min-width: 100px;
 }
 
 .player {

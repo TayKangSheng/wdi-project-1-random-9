@@ -7,7 +7,6 @@
 // create function for ball (x, y, x speed, y speed, radius)
 // create prototype render for ball
 
-// var animate = window.requestAnimationFrame
 // initialize canvas by setting context
 var canvas = document.getElementById('canvas')
 width = canvas.width
@@ -18,6 +17,7 @@ var ctx = canvas.getContext('2d')
 var render = function () {
   ctx.fillStyle = '#000000'
   ctx.fillRect(0, 0, width, height)
+  ctx.font = '25px VT323'
   playerOne.render()
   playerTwo.render()
 }
@@ -37,8 +37,6 @@ Paddle.prototype.render = function () {
   ctx.beginPath()
   ctx.fillStyle = '#00ff00'
   ctx.fillRect(this.x, this.y, this.width, this.height)
-  // ctx.font = '20px sans-serif'
-  // ctx.fillText(this.score.toString(), 175, 50)
   ctx.closePath()
 }
 
@@ -56,7 +54,6 @@ function Player2 () {
 
 Player1.prototype.render = function () {
   this.paddle.render()
-  ctx.font = '25px VT323'
   ctx.fillText(this.score, 175, 50)
 }
 
@@ -139,30 +136,14 @@ Ball.prototype.update = function (paddle1, paddle2) {
   ctx.clearRect(0, 0, 700, 500) //  to erase any shapes that have been drawn previously, for eg background and paddles. sets all pixels defined by x,y and width, height to transparent black
   render()  //  render back the shapes
   ctx.save()  //  set original state of the canvas
-  ctx.beginPath()
+  // ctx.beginPath()
   ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2)
   ctx.fillStyle = '#00ff00'
   ctx.fill()
-  ctx.closePath()
+  // ctx.closePath()
   ctx.restore() //  restore to saved state
 }
 
-// function KeyListener() {
-//   this.pressedKeys = []
-//
-//   this.keydown = function(e) {
-//     this.pressedKeys[e.keyCode] = true
-//   }
-//   this.keyup = function(e) {
-//     this.pressedKeys[e.keyCode] = false
-//   }
-//   window.addEventListener('keydown', this.keydown.bind(this))
-//   window.addEventListener('keyup', this.keyup.bind(this))
-// }
-//
-// KeyListener.prototype.isPressed = function(key) {
-//   return this.pressedKeys[key] ? true : false
-// }
 var keysDown = {}
 //  move paddles when keys are pressed
 window.addEventListener('keydown', function (e) {
