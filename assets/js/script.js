@@ -167,7 +167,7 @@ var keysDown = {}
 //  move paddles when keys are pressed
 window.addEventListener('keydown', function (e) {
   keysDown[e.keyCode] = true
-  e.preventDefault()
+  e.preventDefault()  //  to prevent page from scrolling when arrow up and down keys are pressed
 })
 window.addEventListener('keyup', function (e) {
   delete keysDown[e.keyCode]
