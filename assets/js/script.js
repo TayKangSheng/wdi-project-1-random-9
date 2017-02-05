@@ -9,8 +9,8 @@
 
 // initialize canvas by setting context
 var canvas = document.getElementById('canvas')
-width = canvas.width
-height = canvas.height
+var width = canvas.width
+var height = canvas.height
 var ctx = canvas.getContext('2d')
 
 // rendering the background of the game
