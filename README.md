@@ -2,7 +2,7 @@
 
 # Pong game
 This is a Javascript Pong game for web browsers.
-  * [Game demo](https://wdi-sg.github.io/wdi-project-1-random-9/)
+  * [Game demo](http://xavierpoh.com/WDI8-Project1-Pong/)
 
 ### Created using:
   * Javascript
@@ -10,7 +10,7 @@ This is a Javascript Pong game for web browsers.
   * HTML5
 
   * CSS
-  
+
   * Canvas
 
 ### WDI Project 1, General Assembly
